@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+section{
+    width: 428px;
+    height: 1432px;
+}
+
+.background{
+    width: 428px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.head{
+    position: absolute;
+    top: 14px;
+    left: 100px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 28px;
+    color: #DAB65C;
+    border: solid 2px;
+}
+
+.grille{
+    position: absolute;
+    top: 75px;
+    left: 10px;
+    display: grid;
+    justify-content: center;
+    /* margin: 45px; */
+    width: 95%;
+    height: 1350px;
+    grid-template-columns: repeat(2, 192px);
+    column-gap: 20px;
+
+
+}
+
+.grid-item{
+    width: 192px;
+    height: 187px;
+    background: #DAB65C;
+    opacity: .3;
+     
+}

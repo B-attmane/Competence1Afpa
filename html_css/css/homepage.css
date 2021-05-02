@@ -1,7 +1,142 @@
 :root{
-    --background:
-    --color: RGBA ( )#F3B666;
+    --gold: Hex #DAB65C;
+}
+/* #region general */
 
-/* #region header*/
+* {
+    margin:0;
+    padding:0;
+}
 
-/* #endregion header*/
+body{
+    margin: auto;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+/* #endregion general */
+
+/* #region section */   
+section{
+    width: 428px;
+    height: 918px;
+}
+
+.logo {
+    position: absolute;
+    top: 48px;
+    left: 10px;
+    width: 42px;
+    height: 43px
+}
+
+.slogan{
+    position: absolute;
+    top: 20%;
+    left: 6%;
+    font-size: 23px;
+    color: #DAB65C;
+    letter-spacing: 3.5px;    
+}
+
+.pegase{
+    width: 428px;
+    height: 100%;
+    object-fit: cover;
+    object-position: 16% 0%;
+}
+/* #endregion section */
+
+/* #region header */
+
+.header{
+    display: flex;
+}
+
+.bordure{
+    width: 428px;
+}
+/* #endregion header */
+
+/* #region sidebar */
+.sidebar{
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    height: 80%;
+    background-color: #473a3a;
+    /* opacity: 0.8; */
+    left:-300px;
+    transition: .4s;
+    z-index: 4;
+}
+
+
+.sidebar ul li{
+    list-style: none;
+    color:#DAB65C;
+    font-size: 23px;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.sidebar.active{
+    left: 0;
+}
+
+/* #endregion sidebar */
+
+/* #region burger */
+.burger{
+    position: absolute;
+    left: 320px;
+    width: 42px;
+    height: 40px;
+     /* background-color: #DAB65C; */
+}
+
+.burger span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #707070;
+    top: 50%;
+    transform: translateY(-50%);
+    /* transition quand js entends le clic et active le toggle*/
+    transition: background-color 0.5s ease-in-out;
+}
+
+.burger span::before, .burger span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #707070;
+    transition: transform 0.5s ease-in-out;
+}
+
+.burger span::before{
+    transform: translateY(-10px);
+}
+
+.burger span::after{
+    transform: translateY(10px);
+}
+
+.burger.active span{
+    /* faire disparaitre barre du milieu */
+    background-color: transparent;
+}
+
+.burger.active span::before{
+    transform: translateY(0px) rotateZ(45deg);
+}
+
+.burger.active span::after{
+    transform: translateY(0px) rotateZ(-45deg);
+}
+
+
+/* #endregion burger */
+
